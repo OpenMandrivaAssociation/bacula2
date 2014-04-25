@@ -1,0 +1,11 @@
+# filter bacula console script 
+addFilter("E: wrong-script-interpreter")
+# filter bacula specific attr/gid/uid/exec
+addFilter("E: non-standard-executable-perm")
+addFilter("W: non-standard-uid")
+addFilter("W: non-standard-gid")
+addFilter("E: non-standard-dir-perm") 
+# wtf and plymouth && perf then ?
+addFilter("W: non-standard-dir-in-usr")
+# /etc/bacula2/bacula-fd.conf 0640
+addFilter("E: non-readable")

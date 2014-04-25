@@ -1,0 +1,11 @@
+--- configure~	2008-12-28 04:41:33.000000000 -0600
++++ configure	2010-07-30 08:50:59.544181898 -0500
+@@ -15621,7 +15621,7 @@
+   if test "$withval" != "no"; then
+      if test "$withval" = "yes"; then
+ 	for python_root in /usr /usr/local /usr/sfw; do
+-	  for ver in python2.2 python2.3 python2.4 python2.5 python2.6 python3; do
++	  for ver in python2.2 python2.3 python2.4 python2.5 python2.6 python2.7 python3; do
+ 	     if test -f $python_root/include/${ver}/Python.h; then
+ 		PYTHON_INCDIR=-I$python_root/include/${ver}
+ 		if test -d $python_root/lib64/${ver}/config; then

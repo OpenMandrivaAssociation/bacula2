@@ -1,0 +1,11 @@
+[Unit]
+Description=Bacula2 Backup Client
+After=network.target
+
+[Service]
+Type=forking
+PIDFile=/run/bacula2-fd.9102.pid
+ExecStart=/usr/sbin/bacula2-fd -c /etc/bacula2/bacula-fd.conf
+
+[Install]
+WantedBy=multi-user.target

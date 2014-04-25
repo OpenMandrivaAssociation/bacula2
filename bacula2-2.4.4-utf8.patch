@@ -1,0 +1,24 @@
+--- bacula-2.4.4/examples/conf/m4.email		2004-09-06 21:57:39.000000000 +0100
++++ bacula-2.4.4/examples/conf/m4.email.utf8	2010-02-05 16:17:22.475047364 +0000
+@@ -20,8 +20,8 @@
+ -- 
+ Peter Eriksson <peter@ifm.liu.se>            Phone:    +46 13  28 2786
+ Computer Systems Manager/BOFH                Cell/GSM: +46 705 18 2786
+-Physics Department, Linköping University     Room:     Building F, F203
+-SE-581 83 Linköping, Sweden                  http://www.ifm.liu.se/~peter
++Physics Department, LinkÃ¶ping University     Room:     Building F, F203
++SE-581 83 LinkÃ¶ping, Sweden                  http://www.ifm.liu.se/~peter
+ 
+ See the files bacula-defs.m4 m4.bacula-dir.conf m4.bacula-fd.conf and
+ m4.bacula-sd.conf in this directory for the attachments to this
+--- bacula-2.4.4/examples/nagios/nagios.txt		2006-09-06 19:40:39.000000000 +0100
++++ bacula-2.4.4/examples/nagios/nagios.txt.utf8	2010-02-05 16:18:32.396112106 +0000
+@@ -199,7 +199,7 @@
+ -- 
+ Julian Hein                   NETWAYS GmbH
+ Managing Director             Deutschherrnstr. 47a
+-Fon.0911/92885-0              D-90429 Nürnberg
++Fon.0911/92885-0              D-90429 NÃ¼rnberg
+ Fax.0911/92885-31                                        
+ jhein@netways.de              www.netways.de     
+ 

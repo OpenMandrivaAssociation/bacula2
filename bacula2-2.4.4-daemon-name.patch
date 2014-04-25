@@ -1,0 +1,51 @@
+--- src/filed/filed.c.orig	2012-03-19 10:18:50.103235954 -0500
++++ src/filed/filed.c	2012-03-19 10:20:04.360207713 -0500
+@@ -50,7 +50,7 @@
+ void *start_heap;
+ 
+ 
+-#define CONFIG_FILE "bacula-fd.conf" /* default config file */
++#define CONFIG_FILE "bacula2-fd.conf" /* default config file */
+ 
+ char *configfile = NULL;
+ static bool foreground = false;
+@@ -63,7 +63,7 @@
+    Pmsg3(-1, _(
+ PROG_COPYRIGHT
+ "\nVersion: %s (%s)\n\n"
+-"Usage: bacula-fd [-f -s] [-c config_file] [-d debug_level]\n"
++"Usage: bacula2-fd [-f -s] [-c config_file] [-d debug_level]\n"
+ "        -c <file>   use <file> as configuration file\n"
+ "        -dnn        set debug level to nn\n"
+ "        -f          run in foreground (for debugging)\n"
+@@ -100,7 +100,7 @@
+    textdomain("bacula");
+ 
+    init_stack_dump();
+-   my_name_is(argc, argv, "bacula-fd");
++   my_name_is(argc, argv, "bacula2-fd");
+    init_msg(NULL, NULL);
+    daemon_start_time = time(NULL);
+ 
+@@ -200,8 +200,8 @@
+    }
+ 
+    /* Maximum 1 daemon at a time */
+-   create_pid_file(me->pid_directory, "bacula-fd", get_first_port_host_order(me->FDaddrs));
+-   read_state_file(me->working_directory, "bacula-fd", get_first_port_host_order(me->FDaddrs));
++   create_pid_file(me->pid_directory, "bacula2-fd", get_first_port_host_order(me->FDaddrs));
++   read_state_file(me->working_directory, "bacula2-fd", get_first_port_host_order(me->FDaddrs));
+ 
+    drop(uid, gid);
+ 
+@@ -244,8 +244,8 @@
+ 
+    bnet_stop_thread_server(server_tid);
+    generate_daemon_event(NULL, "Exit");
+-   write_state_file(me->working_directory, "bacula-fd", get_first_port_host_order(me->FDaddrs));
+-   delete_pid_file(me->pid_directory, "bacula-fd", get_first_port_host_order(me->FDaddrs));
++   write_state_file(me->working_directory, "bacula2-fd", get_first_port_host_order(me->FDaddrs));
++   delete_pid_file(me->pid_directory, "bacula2-fd", get_first_port_host_order(me->FDaddrs));
+ 
+    if (configfile != NULL) {
+       free(configfile);
