@@ -60,7 +60,7 @@ Summary: 	Bacula backup client
 Group:   	%{group}
 Requires: 	bacula2-common = %{EVRD}
 Requires(post): systemd-units
-Requires(post): systemd-sysv
+Requires(post): sysvinit
 Requires(preun): systemd-units
 Requires(postun): systemd-units
 
