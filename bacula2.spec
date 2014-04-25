@@ -180,7 +180,9 @@ fi
 %files client
 %{_sbindir}/btraceback
 %{_sbindir}/bacula2-fd
+%{_sbindir}/bconsole
 %{_unitdir}/bacula2-fd.service
 %config(noreplace) %{_sysconfdir}/bacula2/bacula-fd.conf
+%config(noreplace) %{_sysconfdir}/bacula2/bconsole.conf
 %{_mandir}/man8/*
 
